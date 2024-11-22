@@ -69,6 +69,13 @@ body {
 .footer-container {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+}
+
+@media (max-width: 575px) {
+    .footer-container {
+        flex-direction: column;
+    }
 }
 
 .footer-item {
