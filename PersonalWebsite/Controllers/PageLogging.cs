@@ -25,9 +25,11 @@ namespace PersonalWebsite.Middleware
                 }
                 else
                 {
+                    //Ensure it is actually a valid URL
+                    var endpoint = context.GetEndpoint();
                     //Exclude retrieving files
                     var split = url.Value.Split("/");
-                    if (!split[split.Length - 1].Contains("."))
+                    if (endpoint != null && !split[split.Length - 1].Contains("."))
                     {
                         LogPageVisit(url.Value, serviceProvider);
                     }
@@ -47,7 +49,7 @@ namespace PersonalWebsite.Middleware
                 var _db = scope.ServiceProvider.GetRequiredService<DBContext>();
                 _db.VisitLogs.Add(new VisitLog(url, DateTime.Now));
                 _db.SaveChanges();
-            }            
+            }
         }
     }
 

@@ -16,9 +16,6 @@ builder.Services.AddDbContext<DBContext>(options => options.UseSqlite(connection
 
 var app = builder.Build();
 
-//Configure middleware for page logging
-app.UseMiddleware<PageLogging>();
-
 //Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -33,5 +30,8 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+//Configure middleware for page logging
+app.UseMiddleware<PageLogging>();
 
 app.Run();
