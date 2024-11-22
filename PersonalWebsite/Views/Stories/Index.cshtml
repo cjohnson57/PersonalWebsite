@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Short Stories";
+}
+@using PersonalWebsite.Models
+@model List<Story>
+
+<div>
+    @foreach (Story story in Model)
+    {
+        <h3>@Html.ActionLink(story.Name, "ReadStory", "Stories", new { storyId = story.StoryId })</h3>
+        <p>@story.Description</p>
+    }
+    <br />
+</div>
+

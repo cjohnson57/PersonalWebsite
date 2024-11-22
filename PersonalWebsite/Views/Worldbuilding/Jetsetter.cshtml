@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "World of Jetsetter";
+}
+@using PersonalWebsite.Models
+@model List<Article>
+
+<div>
+    <h1>
+        The World of Jet-setter
+    </h1>
+    <p>
+        In the year 2345, humanity has fled from the climate change-ridden Earth and settled amongst the stars. They did so using the discovery of deep-sea algae which can teleport using magic, an energy which allows some species to bend the rules of physics.
+    </p>
+    <p>
+        Most of the lore of this world was written as fictional Wikipedia articles or book excerpts, so those will be transcribed here.
+    </p>
+</div>
+<br />
+<div>
+    @foreach (Article article in Model)
+    {
+        <p>@Html.ActionLink(article.Name, "ReadArticle", "Worldbuilding", new { articleId = article.ArticleId })</p>
+    }
+    <br />
+</div>
+

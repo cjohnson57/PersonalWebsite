@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Short Stories";
+}
+@using PersonalWebsite.Models
+@model Story
+
+@if (Model.StoryId > 0)
+{
+    <div class="text-center">
+        <h1>@Model.Name</h1>
+        <h3>@Model.Description</h3>
+        <p><i>Written @(Model.DateWritten.ToString("MMMM")) @(Model.DateWritten.ToString("yyyy"))</i></p>
+    </div>
+    <div class="story-content">
+        @Html.Raw(Model.Content)
+    </div>
+}
+else
+{
+    <div class="text-center">
+        <h2>No story with this ID found.</h2>
+    </div>
+}

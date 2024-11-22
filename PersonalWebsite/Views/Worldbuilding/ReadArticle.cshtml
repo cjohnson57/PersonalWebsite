@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "World of Jetsetter";
+}
+@using PersonalWebsite.Models
+@model Article
+
+@if (Model.ArticleId > 0)
+{
+    <div class="text-center">
+        <h1>@Model.Name</h1>
+    </div>
+    <br />
+    <div class="story-content">
+        @Html.Raw(Model.Content)
+    </div>
+}
+else
+{
+    <div class="text-center">
+        <h2>No article with this ID found.</h2>
+    </div>
+}

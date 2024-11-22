@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Worldbuilding";
+}
+@using PersonalWebsite.Models
+@model List<World>
+
+<div>
+    @foreach (World world in Model)
+    {
+        <h3>@Html.ActionLink(world.Name, world.Identifier, "Worldbuilding")</h3>
+        <p>@world.Description</p>
+    }
+    <br />
+</div>
+

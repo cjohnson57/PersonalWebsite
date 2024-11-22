@@ -1,0 +1,15 @@
+Configure nginx:
+sudo nano /etc/nginx/sites-available/myapp
+
+After config change, test:
+sudo nginx -t
+
+Then restart nginx:
+sudo systemctl restart nginx
+
+
+Run:
+dotnet PersonalWebsite.dll
+
+If it doesn't default to 5000 for whatever reason:
+dotnet PersonalWebsite.dll --urls "http://localhost:5000"

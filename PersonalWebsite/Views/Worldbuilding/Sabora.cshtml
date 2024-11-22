@@ -1,0 +1,169 @@
+﻿@{
+    ViewData["Title"] = "Sabora";
+}
+@using PersonalWebsite.Models
+@model List<Article>
+
+<div>
+    <h1>Realms</h1>
+    <h2>Sabora, AKA the human realm</h2>
+    <p>
+        A planet originally inhabited by humans. For most of its existence, demons could only exist on it temporarily, and only when summoned by humans (aptly called summoners). However, a couple millenia ago, and event known as “The Intertwining” occurred. Without getting too detailed on the specifics, this allowed demons to cross over into Sabora relatively freely. It still takes concerted effort and spiritual power to do so, though. If it helps, imagine that it’s roughly equivalent to saving up enough money to emigrate to the opposite hemisphere.
+    </p>
+    <p>
+        Now that demons could exist in Sabora without being under human control, the dynamic between the two races changed greatly. The humans, once much more free-spirited and open, became more militaristic and insulated to protect themselves from the demons. Nowadays, demons and humans sort of live side-by-side. You can’t travel through the city without meeting several, but you won’t usually find humans and demons living in the same place (largely because human habitats are not suitable for them). You can even find demons in positions of power at large companies. Of course many humans still distrust demons, especially certain clans. (This is not a metaphor for racism, it’s simply a fact that some clans of demons are just kind of evil.)
+    </p>
+    <p>
+        Of course, many demons still choose to remain in the underworld, yet form contracts with humans in order to be summoned to Sabora to do their bidding. To understand why, understand that many demons’ primary goal in life is to attain more power, and humans that summon demons tend to do so because they want to fight things with them, which helps the demon gain power. By forming a contract with a human, they don’t have to put up the upfront cost to cross over to Sabora permanently, but can still hang out with someone who’s bound to support them in fights. It’s well known that contract demons tend to last longer than Sabora-bound demons. The human might outgrow them and dump them rather than fusing, but then they live to form another contract. A demon may even contract with humans in order to build up enough to cross over.
+    </p>
+    <p>
+        Note that when I say “permanently” in regards to a demon moving to Sabora, it’s not actually permanent. In fact, going back to the underworld is pretty much effortless. However, they’d then have to front the cost to go back to Sabora, so unless they’re extremely powerful they usually stay in Sabora unless they just decide they want to live in the underworld again. Unfortunately, if a demon is permanently killed, they will be forcibly returned to the underworld to re-form themselves.
+    </p>
+    <p>
+        Sabora’s moon is very close to the planet, which eventually led to a synchronous orbit. This means that it is always visible from the side of the planet Eblana is on, and that the phases change rapidly, going through a full phase cycle every 32 hours. The moon is very large in the sky.
+    </p>
+    <p>
+        This oddity of celestial positioning causes extremely powerful tides, which in turn causes tidal heating, leading to many active volcanoes and common seismic activity on Sabora. The wealth of a city is generally determined by how far away it is from the nearest volcanoes. The moon also affects the weather of Sabora due to atmospheric tides.
+    </p>
+    <h3>Tupeth</h3>
+    <p>
+        One of 6 continents of Sabora. By far the hottest continent, laying directly on the equator and directly across from the moon, receiving the worst of the effects of the atmospheric tides.
+    </p>
+    <h4>Eblana</h4>
+    <p>
+        The country in which this game takes place. It is the largest country on the continent of Tupeth, with the second largest economy, trailing Osgard. About half of its land area is inhospitable desert and volcanoes.
+    </p>
+    <h4>Burnsley</h4>
+    <p>
+        The largest city and cultural center (but not the capitol) of Eblana. This is where the party resides, and likely where most of the game will take place. It exists in a deep swamp surrounded by desert. It’s somewhat of an anomaly, being a large economy despite its relative proximity to volcanic ashlands and desert. This is due to being the first and largest major port on Tupeth’s western coast, which is closest to the other nearby continents.
+    </p>
+    <h2>The Underworld, AKA the demon realm</h2>
+    <p>
+        The underworld is where demons are born. While demons can be fused into new ones on Sabora, they cannot be created there. The exact process by which new demons are birthed in the underworld is not exactly understood, but any demon will tell you that they simply didn’t exist and then one moment they did.
+    </p>
+    <p>
+        The Intertwining, unfortunately, is not a two-way street for humans. While it is possible for humans to travel to the underworld, they won’t last more than a second. Not because they’ll be ripped apart by demons, or the air is poison, or anything like that; it’s basically the spiritual equivalent of stepping into space without a spacesuit. The free-flowing spiritual energy of the underworld pretty much removes their soul from their body and casts it to the wind. It is theorized that fiends could survive in the underworld, but due to the value and rarity of fiends this has not yet been tested.
+    </p>
+    <p>
+        Sending material possessions between the realms is also not possible. It seems the only thing that can cross over is a soul and its body.
+    </p>
+    <p>
+        There are 6 regions of the underworld (6 is known to be a powerful number in demonology and magic). Each region is unique in appearance, but between them is a barren landscape known as the Fields of Asphodel. In the center of the underworld lies a great storm that demons dare not approach, for doing so fills them with a sense of dread, and those that do never come back.
+    </p>
+    <h3>Heaven</h3>
+    <p>
+        Heaven is not a separate realm, but just a part of the underworld where angels rule over holy-type demons with an iron fist. God does not live there, instead existing outside both realms (if he indeed exists at all).
+    </p>
+    <h3>Hell</h3>
+    <p>
+        Like Heaven, Hell is a region of the underworld. While it’s not necessarily that much worse than the other regions, it is a chaotic land where the more evil demons reside. Not recommended to travel there unless you’re tough and can defend yourself.
+    </p>
+    <h3>Valhalla</h3>
+    <p>
+        Valhalla is a region of the underworld where many martial and warrior-type demons reside, spending their lives fighting each other for glory and to gain power.
+    </p>
+    <h3>Kama Loka</h3>
+    <p>
+        The red light district of the underworld, where sexual desire rules. Home to incubi, succubi, and Mara.
+    </p>
+    <h3>Sheol</h3>
+    <p>
+        A forested land of quiet and darkness, but also the most peaceful. Demons here have either given up on gaining power, or are resting between bouts of strife.
+    </p>
+    <h3>Tlālōcān</h3>
+    <p>
+        A large ocean of black water dotted with islands, inhabited by aquatic demons or those seeking the island lifestyle.
+    </p>
+    <h1>Factions of Burnsley</h1>
+    <h2>The Church</h2>
+    <p>
+        As in most countries, the Church is an all-important part of life in Burnsley. While a fairly small portion of people actually attend, the vast majority (roughly 75%)  believe. Without getting into too much detail, the basic teaching of the church is that there is a God, a “third being” that is neither human nor demon, but who created and watches over the realms. They believe that demons are reborn humans, with those who lived bad lives being born into the more violent clans and those who lived good lives being born into the angelic or holy clans. (Of course, the angels can be plenty violent when they want to.)
+    </p>
+    <p>
+        Angels and holy demons are generally on the same side as the church, but that doesn’t mean they always agree. In fact, several wars have been fought between the church and the angels, with both sides believing they were carrying out God’s will. Currently, their relationship has been stable for several centuries, or at least appears to be.
+    </p>
+    <p>
+        Under the surface, the Church does not operate too differently from the corporations, with one major difference: While the corporations seek to make money, the church as a whole genuinely believes in its mission and aims to advance their goals and control the populace “for their own good”.
+    </p>
+    <p>
+        In truth, these goals are often the ramblings of madmen “prophets” who claim to have heard the voice of God. Perhaps one week, a prophet declares that the church should destroy all books with blue covers, and they pursue this goal fervently. The next week, this new rule is mostly forgotten, as the Church chases their new goal of planting 10,000 trees for each priest.
+    </p>
+    <p>
+        While most people do generally believe the teachings of the church, only those in the church care for these ever-changing decrees, also known as tests of faith, but if challenged on something by a churchman they will comply to avoid invoking their wrath. Of course, there are definitely some in the church who know it’s a clown show, but stay on anyway in aim of profit and/or control.
+    </p>
+    <h2>Primedia and Accentex</h2>
+    <p>
+        I could tell you which corporation is more profitable between Primedia and Accentex, but it’d be pointless. By the time I finish the sentence, they’ll have swapped again. Of course, this doesn’t prevent both sides from having rooms full of people who watch the lines move around, cheering when their company comes above and booing in distress when the other does.
+    </p>
+    <p>
+        Both corporations control large news distributors, with Primedia being somewhat left-slanted and Accentex being somewhat right-slanted, but it’s no secret that the government is so corrupt the left/right dichotomy doesn’t really mean anything. In fact, it has basically 0 bearing on which officials will work for which company.
+    </p>
+    <p>
+        Primedia also owns the social media giant Pivot, while Accentex owns Nimbus. (To simplify it, Pivot is like Twitter and Nimbus is like Instagram/Threads). Along with those, all but #9 of the top 10 used websites are owned by one of the two.
+    </p>
+    <p>
+        Of course, both companies manufacture weapons and COMPs, and both employ their own paramilitary forces which are supplemented by mercenaries when necessary.
+    </p>
+    <p>
+        Primedia’s company colors are purple and orange, while Accentex’s are blue and yellow.
+    </p>
+    <p>
+        One of the only markets Accentex participates in that Primedia does not is consumer electronics, where their primary competition is from Joytech. Conversely, Primedia is an active book publisher, a business with Accentex has only dipped its toes into.
+    </p>
+    <h2>The Government</h2>
+    <p>
+        The government cannot be said to have any particular goal, alignment, or loyalty. The government of Eblana is made up of myriad figures, each with their own goals and levels of corruption. Bribes are so rampant, the government practically runs on them. Within the same agency, Official A may be paid off by Primedia to oppose Accentex while Official B, whose office is next door to Official A, is paid off by Accentex to oppose Primedia; and then the next week, both have been paid off by the other and swapped sides. Official C next door is secretly working to advance the aims of the church due to genuine belief, while Official D actually just wants to make the citizens’ lives better.
+    </p>
+    <p>
+        Due to longstanding laws, demons cannot hold positions as government officials, but can still be employed by the government.
+    </p>
+    <p>
+        The party is a combat squad working for the government. Due to this hodgepodge of aims and bribery, they’ve worked both for and against every major faction in the city on numerous occasions. Except for maybe the Church, there’s no hard feelings- It’s simply how business is conducted in the city.
+    </p>
+    <h2>Minor Factions</h2>
+    <h3>Joytech</h3>
+    <p>
+        Joytech is a smaller corp, known for its cooperation with the Church. Outside of electronics, their primary source of income comes from excavating ancient relics and selling them to the Church as holy artifacts. Of course, as to not sour their relationship, they find themselves beholden to the whims of the Church’s latest prophecies, causing the church’s prophets to cut into the company’s profits.
+    </p>
+    <h3>Caring Hands Group</h3>
+    <p>
+        The largest genuinely altruistic faction, the Caring Hands Group is sort of like a distributor for artists and craftsmen to sell their goods, with the Group taking a cut of the sales. But rather than stuffing this cut into the owners’ pockets, the Group actually invests heavily in affordable housing, soup kitchens and the like. Just about anyone from Burnsley who’s ever been down on their luck has a story about how the Group helped them.
+    </p>
+    <h3>Creed of the Human Mind</h3>
+    <p>
+        Denounced by the Church as a “cult”, the Creed of the Human Mind is a newer religion which is slowly gaining ground. Though still followed by less than 5% of the population, those who do follow do so much more actively on average. The Creed preaches that there is no “third being” of God, and that demons are instead created from a primordial energy which feeds off the thoughts and feelings of human beings. They teach that this same energy created humans originally, who chose to leave the Underworld for Sabora when they determined it had much greater promise.
+    </p>
+    <h3>The Crimson Brutes</h3>
+    <p>
+        A mercenary company led by a particularly powerful Oni. While DICE's own squads tend to be a little more covert, they sometimes contract the Brutes for more direct confrontations. Their typical strategy is to send demons in to fight in the front line, while the small amount of humans in the company stay back and man the artillery or other long-range weapons.
+    </p>
+    <h1>Possibly Unfamiliar Terms</h1>
+    <h2>DICE</h2>
+    <p>
+        The Division for Intelligence, Coercion, and Enforcement. A government agency which basically consists of fixer squads handled by supervisors, and thus a prime target for corruption. The players are a squad within this division.
+    </p>
+    <p>
+        Your supervisor is Eddy, a real piece of work with a near-permanent shit-eating grin on his face. At least half or more of the time you find yourself working for one of the corporations or the church rather than the government, but of course his reports say otherwise.
+    </p>
+    <h2>COMPS</h2>
+    <p>
+        COMPs are arm-mounted computers for the express purpose of automating the complex rituals required for summoning demons. While summoners used to be knowledgeable occultists who used complex symbols and chants, a COMP allows anyone to summon demons- If their spiritual power is strong enough for it. They are generally not allowed to be owned by civilians, but any half-decent military troop or mercenary group will have a squad of summoners. And of course, a lively black market exists for them as well.
+    </p>
+    <p>
+        COMPs are single-purpose computers, a rarity in this age, but extremely sturdy. Since modern technology makes their actual required footprint very small, the machines are mostly full of redundant circuitry and safety measures, making it nigh-impossible to disable a COMP without also killing the owner of the arm it’s attached to.
+    </p>
+    <h2>Fiends</h2>
+    <p>
+        The existence of fiends is kind of an open secret. They are not officially confirmed to be real, and not everyone believes they really exist, but those in the know, know.
+    </p>
+    <p>
+        Fiends are created by feeding a unique type of demon called a Magatama to a human being. Once consumed, the human will take on attributes of the magatama, and gain abilities from it. The magatama can be vomited up, causing the human to lose its attributes, but the transformation cannot be reversed. The human is still part magatama, and retains any abilities they’ve gained from them. Due to this, the government has recently begun experimenting with combining the abilities of different magatama into one fiend.
+    </p>
+    <p>
+        There is only one thing that everyone in the government agrees on: That the creation of fiends should stay with the government. Either because they think the knowledge is too dangerous, or because they don’t want to lose their shiny new bargaining chip with the corps. If the corps can make their own fiends, then they won’t pay top dollar for the government to send in their fiends on the company’s behalf.
+    </p>
+    <p>
+        The party is of course aware of magatama and that they create fiends, having at least one fiend among their ranks, but they are not aware of how magatama are procured. As far as they are aware, magatama are not summonable in the normal way, and demons cannot take other demons with them when crossing over.
+    </p>
+</div>
+
