@@ -7,12 +7,12 @@ namespace PersonalWebsite.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly DBContext _db;
+        private readonly StatsDBContext _statsDb;
 
-        public HomeController(ILogger<HomeController> logger, DBContext db)
+        public HomeController(ILogger<HomeController> logger, StatsDBContext statsDb)
         {
             _logger = logger;
-            _db = db;
+            _statsDb = statsDb;
         }
 
         public IActionResult Index()
@@ -53,7 +53,7 @@ namespace PersonalWebsite.Controllers
 
         public IActionResult Stats()
         {
-            List<VisitLog> logs = _db.VisitLogs.ToList();
+            List<VisitLog> logs = _statsDb.VisitLogs.ToList();
             var pageVisits = logs.GroupBy(x => x.URL);
             List<PageVisitStats> stats = new List<PageVisitStats>();
             foreach (var visits in pageVisits)

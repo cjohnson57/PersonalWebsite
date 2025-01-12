@@ -8,11 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 //Set up DB
-var folder = Environment.SpecialFolder.LocalApplicationData;
-var path = Environment.GetFolderPath(folder);
-string DbPath = Path.Join(path, "Database.sqlite");
 string connectionString = "Data Source=Database.sqlite;Cache=Shared;";
 builder.Services.AddDbContext<DBContext>(options => options.UseSqlite(connectionString));
+
+//Set up stats DB
+string statsConnectionString = "Data Source=StatsDatabase.sqlite;Cache=Shared;";
+builder.Services.AddDbContext<StatsDBContext>(options => options.UseSqlite(statsConnectionString));
 
 var app = builder.Build();
 

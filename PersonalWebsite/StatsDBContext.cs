@@ -6,15 +6,13 @@ using System.Reflection.Metadata;
 
 namespace PersonalWebsite.Models
 {
-    public class DBContext : DbContext
+    public class StatsDBContext : DbContext
     {
-        public DbSet<Story> Stories { get; set; }
-        public DbSet<World> Worlds { get; set; }
-        public DbSet<Article> Articles { get; set; }
+        public DbSet<VisitLog> VisitLogs { get; set; }
 
         public string DbPath { get; }
 
-        public DBContext(DbContextOptions<DBContext> options) : base(options)
+        public StatsDBContext(DbContextOptions<StatsDBContext> options) : base(options)
         {
 
         }

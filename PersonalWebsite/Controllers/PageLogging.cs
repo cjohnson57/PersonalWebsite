@@ -46,9 +46,9 @@ namespace PersonalWebsite.Middleware
         {
             using (var scope = serviceProvider.CreateScope())
             {
-                var _db = scope.ServiceProvider.GetRequiredService<DBContext>();
-                _db.VisitLogs.Add(new VisitLog(url, DateTime.Now));
-                _db.SaveChanges();
+                var _statsDb = scope.ServiceProvider.GetRequiredService<StatsDBContext>();
+                _statsDb.VisitLogs.Add(new VisitLog(url, DateTime.Now));
+                _statsDb.SaveChanges();
             }
         }
     }
