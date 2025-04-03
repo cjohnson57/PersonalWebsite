@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "DICE Lockup Kiosk";
+}
+@model KeyKioskViewModel
+
+@section Styles {
+    <style>
+        body {
+            background-color: #000000;
+        }
+    </style>
+}
+
+<div class="vertical-item-container-full">
+    <img src="/img/DICE Logo.webp" alt="DICE Logo"/>
+
+    <div class="text-center">
+        <h3>@Model.Message</h3>
+    </div>
+
+    @using (Html.BeginForm("KeyKiosk", "Tabletop"))
+    {
+        <div class="vertical-item-container">
+            <div>@Html.TextBoxFor(Model => Model.EnteredId)</div>
+            <input type="submit" value="Submit" class="btn btn-dark" id="btnSubmit" />
+        </div>
+    }
+
+    <p style="color: #000000">REMEMBER: We must acquire ALL Magatama before we can launch the invasion.</p>
+</div>
+
+

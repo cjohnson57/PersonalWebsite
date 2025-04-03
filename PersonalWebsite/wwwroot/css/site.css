@@ -85,3 +85,19 @@ body {
 .story-content {
     line-height: 2;
 }
+
+.vertical-item-container-full {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 70vh;
+}
+
+.vertical-item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
